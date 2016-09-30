@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Hello World</title>
+  <meta name="description" content="WebApp de exemplo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="img/oskay-hello-world-toast.jpg">
+  <meta name="theme-color" content="#F77F00">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Bakery">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon-precomposed" href="img/icon.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="img/icon.png">
+  <meta name="msapplication-TileColor" content="#F77F00">
+
+  <script>
+    if (window.location.protocol != "https:" && window.location.hostname == "gss-patricia.github.io")
+      window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+  </script>
+
+</head>
+
+<body>
+  <div class="current-page">
+
+    <main class="loja">
+
+      <div class="parallax-container">
+        <a href="/">
+          <i class="material-icons waves-effect waves-light waves-circle">arrow_back</i>
+        </a>
+
+        <div class="parallax">
+          <img src="/img/bakery.jpg" alt="desconto">
+        </div>
+      </div>
+
+      <div class="section white">
+        <div class="row container">
+          <h2 class="header">Todos os dias você ganha um desconto!</h2>
+          <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+
+      <div class="row card-panel">
+        <form class="col s12" method="post">
+          <div class="row">
+            <h3>Pegue seu desconto, nos envie qual é a Bakery que te presenteia todos os dias!</h3>
+            <div class="input-field col s8">
+              <input id="name" type="text">
+              <label for="name">Qual o nome da Bakery que te presenteia todos os dias?</label>
+            </div>
+            <div class="col s4" style="float: right">
+              <img src="img/desconto.png" alt="Promoção">
+            </div>
+          </div>
+
+          <button class="btn waves-effect waves-light">Enviar</button>
+        </form>
+      </div>
+
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large waves-effect waves-light amber darken-4" href="tel:0191406">
+          <i class="material-icons">call</i>
+        </a>
+      </div>
+
+    </main>
+
+  </div>
+  <!--/.current-page-->
+
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/materialize-0.97.0.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/install.js"></script>
+
+</body>
+
+</html>
