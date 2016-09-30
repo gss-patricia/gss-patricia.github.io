@@ -25,7 +25,7 @@ if (typeof files == 'undefined') {
   files.push('./');
 }
 
-var CACHE_NAME = 'bakery-v2.4';
+var CACHE_NAME = 'bakery-v2.5';
 
 self.addEventListener('activate', function(event) {
   console.log('[SW] Activate');
