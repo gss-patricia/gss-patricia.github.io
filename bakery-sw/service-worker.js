@@ -67,5 +67,5 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event);
-  clients.openWindow('/bakery-v1/index.html');
+  clients.openWindow('/bakery-sw/index.html');
 });
