@@ -7,6 +7,9 @@ var files = [
   "icons/material.css",
   "img/entrada.jpg",
   "img/icon.png",
+  "img/hello-world-3d-toast.png",
+  "img/hello-world-toast.jpg",
+  "img/bakery.jpg",
   "js/install.js",
   "js/main.js",
   "js/cupom.js",
@@ -22,7 +25,7 @@ if (typeof files == 'undefined') {
   files.push('./');
 }
 
-var CACHE_NAME = 'bakery-v2.3';
+var CACHE_NAME = 'bakery-v2.4';
 
 self.addEventListener('activate', function(event) {
   console.log('[SW] Activate');
