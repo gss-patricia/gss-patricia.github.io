@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>MATERA SNACKBAR</title>
+  <meta name="description" content="Payment BEPAY">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/favicon.ico" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="img/icon.png">
+  <meta name="theme-color" content="#F77F00">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Bakery">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon-precomposed" href="img/icon.png">
+
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/vendors/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" rel="stylesheet">
+
+  <script src="https://use.fontawesome.com/6a6312675e.js"></script>
+  <script src="https://use.fontawesome.com/webfontloader/1.6.24/webfontloader.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+
+  <!-- Configura a url -->
+  <script>
+    if (window.location.protocol != "https:" && window.location.hostname == "gss-patricia.github.io")
+      window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+  </script>
+
+</head>
+
+<body>
+<div class="wrapper">
+  <div id="wizard" class="wizard">
+    <div class="wizard__content">
+      <header class="wizard__header">
+        <div class="wizard__header-overlay"></div>
+
+        <div class="wizard__header-content">
+          <h1 class="wizard__title">MATERA SNACKBAR!</h1>
+          <p class="wizard__subheading">Faça o pagamento em<span>3</span> simples passos.</p>
+        </div>
+
+        <div class="wizard__steps">
+          <nav class="steps">
+            <div class="step">
+              <div class="step__content">
+                <p class="step__number"><i class="fa fa-shopping-basket" aria-hidden="true"></i></p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+                </svg>
+
+                <div class="lines">
+                  <div class="line -start">
+                  </div>
+
+                  <div class="line -background">
+                  </div>
+
+                  <div class="line -progress">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__content">
+                <p class="step__number"><i class="fa fa-qrcode" aria-hidden="true"></i></p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+                </svg>
+
+                <div class="lines">
+                  <div class="line -background">
+                  </div>
+
+                  <div class="line -progress">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__content">
+                <p class="step__number"><i class="fa fa-hand-spock-o" aria-hidden="true"></i></p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+                </svg>
+
+                <div class="lines">
+                  <div class="line -background">
+                  </div>
+
+                  <div class="line -progress">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+      <div class="panels" style="height: 289px;">
+        <div class="panel movingIn">
+          <header class="panel__header">
+            <h2 class="panel__title">Pagamento com BEPAY.</h2>
+            <p class="panel__subheading">Com BEPAY você pagar os snacks com facilidade!</p>
+          </header>
+          <p class="panel__content bold">Instruções.</p>
+          <p class="panel__content">1 - Escolha seus snacks e some o valor.</p>
+          <p class="panel__content">2 - Agora no seu aplicativo BEPAY, gere o pagamento do valor total das suas compras.</p>
+          <p class="panel__content">3 - Agora siga em frente, vamos lá é rapidinho.</p>
+        </div>
+
+        <div class="panel movingOutFoward">
+          <header class="panel__header">
+            <h2 class="panel__title">Escanei o seu QR Code</h2>
+          </header>
+
+          <div id="reader" style="width:300px;height:250px"></div>
+
+          <p class="panel__content">Posicione o QR Code no centro.</p>
+        </div>
+
+        <div class="panel movingOutFoward">
+          <header class="panel__header">
+            <h2 class="panel__title">QR Code lido com Sucesso!!</h2>
+            <p class="panel__subheading">Você deseja continuar?</p>
+          </header>
+
+          <p class="panel__content">Você está próximo de saborear seu snack! ;)</p>
+        </div>
+      </div>
+
+      <div class="wizard__footer">
+        <button class="button previous disabled">Anterior</button>
+        <button class="button next">Próximo</button>
+      </div>
+    </div>
+
+    <h1 class="wizard__congrats-message">
+      <i class="fa fa-heart-o" aria-hidden="true" style="display: block;"></i>
+      Você está apto a saborear seu snack!!!
+      Volte sempre ;)
+    </h1>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/vendors/html5-qrcode-master/lib/jsqrcode-combined.min.js"></script>
+<script type="text/javascript" src="js/vendors/html5-qrcode-master/lib/html5-qrcode.min.js"></script>
+</body>
+
+</html>
+
